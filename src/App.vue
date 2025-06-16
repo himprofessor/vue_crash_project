@@ -1,13 +1,18 @@
 <template>
-  <Navigation />
-  <p v-for="user in users" :key="user.id">
-    {{user.name}}
-  </p>
+  <header class="shadow-md">
+    <Navigation />
+  </header>
+  <UserList :users="users" />
 </template>
 <script setup>
+// components import
 import Navigation from "@/components/Navigation.vue";
+import UserList from "./components/UserList.vue";
+
+// plugin import
 import axios from "axios";
 import { onMounted, ref } from "vue";
+
 
 const users = ref([]);
 

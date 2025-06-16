@@ -1,6 +1,6 @@
 <template>
-  <nav class="h-16 flex items-center shadow-md justify-between">
-    <div id="nav-item" class="flex items-center m-auto gap-12">
+  <nav class="h-16 flex w-10/12 m-auto  items-center justify-between">
+    <div id="nav-item" class="flex items-center gap-12">
       <navigation-item 
       v-for="item in navItems" 
       :key="item.label" 
