@@ -2,12 +2,11 @@
   <header class="shadow-md">
     <Navigation />
   </header>
-  <UserList :users="users" />
+  <router-view></router-view>
 </template>
 <script setup>
 // components import
 import Navigation from "@/components/Navigation.vue";
-import UserList from "./components/UserList.vue";
 
 // plugin import
 import axios from "axios";

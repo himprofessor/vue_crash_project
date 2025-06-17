@@ -4,11 +4,10 @@
       <navigation-item 
       v-for="item in navItems" 
       :key="item.label" 
-      :item="item">
+      :item="item"
+      :to="item.path"
+      >
       </navigation-item>
-    </div>
-    <div id="nav-item" class="flex items-center m-auto gap-12">
-        <navigation-item :item="{label:'Login', path: '/login', icon: 'login'}"></navigation-item>
     </div>
   </nav>
 </template>
