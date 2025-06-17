@@ -3,7 +3,7 @@
         <h1 class="text-2xl font-semibold">All user</h1>
         <p>All the user that already reigster in our system.</p>
         <div class="grid grid-col-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
-            <UserCard v-for="user in users" :key="user.id" :user="user" />
+            <UserCard v-for="user in users" :key="user.id" :user="user" @handle="show(user)" />
         </div>
     </section>
 </template>
@@ -13,5 +13,9 @@
 import UserCard from "./UserCard.vue";
 
 defineProps(["users"])
+
+const show = (user) => {
+    console.log(user)
+}
 
 </script>

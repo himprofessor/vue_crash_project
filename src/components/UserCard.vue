@@ -10,10 +10,13 @@
         <span class="font-semibold">Address</span>
       </p>
       <p class="text-sm"> St {{user.address.street}}, {{user.address.suite}} , {{user.address.city}}</p>
+      <button @click="$emit('handle')">Detail</button>
     </div>
   </div>
 </template>
 
 <script setup>
 defineProps(["user"]);
+
+
 </script>
